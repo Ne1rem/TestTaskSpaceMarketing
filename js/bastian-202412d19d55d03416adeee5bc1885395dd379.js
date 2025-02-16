@@ -7277,17 +7277,6 @@ var Bastian = (function (e) {
         (e.source = "$Recommendation"),
         e
       ),
-      _ = async () =>
-        await fetch(
-          Object(d.isEnvQA)()
-            ? "https://horizon-track.qa.globoi.com/id"
-            : "https://horizon-track.globo.com/id",
-          { credentials: "include" }
-        ).then((e) => e.json()),
-      O = (e) => {
-        const t = ("; " + document.cookie).split("; " + e + "=");
-        if (2 === t.length) return t.pop().split(";").shift();
-      },
       w = async () => {
         try {
           const e = await _();
